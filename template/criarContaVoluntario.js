@@ -1,6 +1,6 @@
 import transporter from '../config.js';
 
-const sendMailCreateInstitution = async (mail, name) => {
+const sendMailCreateVolunteer = async (mail, name) => {
   try {
     const info = await transporter.sendMail({
       from: '"App Desafio Dispositivos Moveis" <desafioprogdispmoveis@gmail.com>',
@@ -15,14 +15,14 @@ const sendMailCreateInstitution = async (mail, name) => {
           
           <div style="background: #f9f9f9; padding: 30px; border-radius: 0 0 8px 8px;">
             <h2>Olá, ${name}!</h2>
-            <p>Seu cadastro institucional foi realizado com sucesso em nossa plataforma!</p>
+            <p>Seu cadastro como voluntário foi realizado com sucesso em nossa plataforma!</p>
             
             <div style="background: white; padding: 20px; border-left: 4px solid #4CAF50; margin: 20px 0;">
               <h3>✅ Próximos passos:</h3>
               <ul>
                 <li>Acesse sua conta no aplicativo</li>
                 <li>Complete seu perfil</li>
-                <li>Comece a usar nossos serviços e buscar voluntários!</li>
+                <li>Comece a usar nossos serviços e buscar vagas!</li>
               </ul>
             </div>
             
@@ -52,4 +52,4 @@ const sendMailCreateInstitution = async (mail, name) => {
   }
 };
 
-export default sendMailCreateInstitution;
+export default sendMailCreateVolunteer;
